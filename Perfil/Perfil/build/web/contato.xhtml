@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Contato</title>
+         <h:outputStylesheet name="style.css" />
+    </h:head>
+    <h:body>
+        <div class="containerC"> 
+            <div class="menu">
+            
+                    <h:link value="Home" outcome="home" />
+                    <h:link value="Conhecimentos" outcome="conhecimento" />
+                    </div>
+        </div>
+        <hr></hr>
+        <div class="tituloC">
+                <h1>Entre em contato</h1>
+            </div>
+        <h:form>
+            <h:outputLabel class="outpA" for="name" value="Nome: "/>
+            <h:inputText class="txt" id="name" value="#{perfilBean.nome}"/>
+            <br/>
+            <h:outputLabel  class="outpM" for="assunto" value="Assunto: "/>
+            <h:inputText class="txt" id="assunto" value="#{perfilBean.assunto}"/>
+            <br/>
+            <h:outputLabel class="outpA" for="email" value="Email: "/>
+            <h:inputText class="txt" id="email" value="#{perfilBean.email}"/>
+            <br/>
+            <h:outputLabel  for="msg" value="Mensagem: "/>
+            <h:inputText class="txtM" id="msg" value="#{perfilBean.mensagem}"/>
+            <br/>
+            <h:commandButton class="button" id="enviar" value="Enviar" action="#{perfilBean.enviarEmail()}"/>
+            <h:commandButton class="button" id="limpar" value="Limpar" action="#{perfilBean.limpar()}"/>
+        </h:form>
+        <h3>Minha localização</h3><br></br>
+<iframe class="loc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5258.885902635165!2d-52.95014790766077!3d-22.53481936789174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948dec1a6352bc3b%3A0xd7decc866d72d8ab!2sSorveteria%20Doce%20Sabor!5e0!3m2!1spt-BR!2sbr!4v1670808758537!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </h:body>
+</html>
+
